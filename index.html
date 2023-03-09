@@ -1,14 +1,23 @@
 <html>
   <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+    <h1>UCB twitter</h1>
+    <form id="post-form">
+      <div>
+        <span>
+          <label for="titulo">Ingresa el Titulo:</label>
+          <input type="text" id="titulo" />
+        </span>
+        <span>
+          <label for="titulo">Ingresa el detalle:</label>
+          <input type="text" id="detalle" />
+        </span>
+      </div>
+      <input type="submit" value="Publicar" id="publicar-button" />
     </form>
-    <div id="resultado-div"></div>
+    <h2>titulo del post: </h2>
+    <div id="titulo-resultado"></div>
+    <h2>contenido detallado del post: </h2>
+    <div id="detalle-resultado"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>

@@ -1,15 +1,24 @@
 import sumar from "./sumador";
+import {Posts} from "./posts";
+import {Post} from "./post";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const titulo = document.querySelector("#detalle");
+const detalle = document.querySelector("#titulo");
+const form = document.querySelector("#post-form");
+
+const result = document.querySelector("#detalle-resultado");
+const result2 = document.querySelector("#titulo-resultado");
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  //result.innerHTML = "<p>" + titulo.value + "</p>";
+  //result2.innerHTML = "<p>" + detalle.value + "</p>";
+  const posts = new Posts();
+  const poste = new Post(titulo.value , detalle.value);
+  posts.agregarPost(poste);
+  posts.mostrarPost();
+  
+  
 });
